@@ -1,0 +1,69 @@
+\documentclass[online]{osla2}
+
+\title{<%= property_value :title %>}
+% Enable this if you need a shorter version of the title for the header
+%\def\titlehead{<%= property_value :title %>}
+
+\author{<%= property_value :author %>}
+% Enable this if you need a shorter version of the name(s) for the header
+%\def\authorhead{<%= property_value :author %>}
+
+\affiliation{<%= property_values(:contactaffiliation).join(', ') %>}
+
+% Set this to the first page number
+\setcounter{page}{1}
+\begin{document}
+
+\maketitle
+
+<% unless property_value(:abstractname).nil? %>
+% Enable this to override the default heading for the 'Abstract' section
+%\def\abstractname{<%= property_value(:abstractname) %>}
+<% end %>
+\begin{abstract}
+<%= format_paragraphs(paragraphs(:abstract)) %>
+\end{abstract}
+
+<%= format_paragraphs(paragraphs(:body)) %>
+
+<% unless property_value(:bibliographyname).nil? %>
+% Enable this to override the default heading for the 'References' section
+%\def\bibliographyname{<%= property_value(:bibliographyname, 'References') %>}
+<% end %>
+
+<% if paragraphs(:bibliography).length > 0 %>
+\begin{thebibliography}{<%= paragraphs(:bibliography).length %>}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+<% [*paragraphs(:bibliography)].each_with_index do |b, i| %>
+\bibitem[{cit(<%= i %>)}]{cit<%= i %>}
+<%= b %>
+<% end %>
+\end{thebibliography}
+
+% Enable this if you want a BibTeX-based bibliography instead
+%\bibliographystyle{osla2}
+%\bibliography{volume}
+<% else %>
+\bibliographystyle{osla2}
+\bibliography{volume}
+<% end %>
+
+<% unless property_value(:contactsname).nil? %>
+% Enable this to override the default heading for the 'Author contact information' section
+%\def\contactsname{<%= property_value(:contactsname) %>}
+<% end %>
+
+\begin{oslacontacts}
+  <% (0...[property_values(:contactname), property_values(:contactaffiliation), property_values(:contactemailaddress)].map(&:length).max).to_a.each do |i| %>
+    \oslacontact{<%= property_values(:contactname)[i] %>}{<%= property_values(:contactaffiliation)[i] %>}{<%= property_values(:contactemailaddress)[i] %>}
+  <% end %>
+\end{oslacontacts}
+
+\end{document}

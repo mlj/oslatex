@@ -1,0 +1,81 @@
+{
+  "paragraph_styles": {
+    "italics":                [null, "\\emph"],
+    "bold":                   [null, "\\textbf"],
+    "underline":              [null, "\\underline"],
+
+    "Title":                  ["title", ""],
+    "Subtitle":               ["author", ""],
+
+    "AbstractHeading":        ["abstractname", ""],
+    "Abstractparagraph":      ["abstract", ""],
+
+    "BibliographyHeading":    ["bibliographyname", ""],
+    "Bibliography":           ["bibliography", ""],
+
+    "Heading1":               [null, "\\section"],
+    "Heading2":               [null, "\\subsection"],
+    "Heading3":               [null, "\\subsubsection"],
+
+    "UnnumberedHeading1":     [null, "\\section*"],
+    "UnnumberedHeading2":     [null, "\\subsection*"],
+    "UnnumberedHeading3":     [null, "\\subsubsection*"],
+
+    "ListParagraph":          [null, "enumerate!item"],
+
+    "Normal":                 [null, ""],
+    "NormalSpaceAbove":       [null, ""],
+    "NormalSpaceBelow":       [null, ""],
+    "NormalSpaceBoth":        [null, ""],
+    "NormalFirst":            [null, ""],
+    "NormalFirstSpaceAbove":  [null, ""],
+    "NormalFirstSpaceBelow":  [null, ""],
+    "NormalFirstSpaceBoth":   [null, ""],
+    "":                       [null, ""],
+    "FootnoteText":           [null, ""],
+
+    "Quote":                  [null, "blockquote"],
+
+    "FigureCaption":          [null, "\\caption"],
+    "TableCaption":           [null, "\\caption"],
+
+    "Example":                [null, "!ex."],
+    "Ex":                     [null, "!ex."],
+    "example":                [null, "!ex."],
+    "Ex2":                    [null, "!ex."],
+    "ex2":                    [null, "!ex."],
+
+    "Contactsheading":        ["contactsname", ""],
+    "Contactsname":           ["contactname", ""],
+    "Contactsaffiliation":    ["contactaffiliation", ""],
+    "Contactsemailaddress":   ["contactemailaddress", ""]
+  },
+
+  "run_styles": {
+    "italics":                "\\emph",
+    "bold":                   "\\textbf",
+    "underline":              "\\underline",
+    "strikethrough":          "\\st",
+    "smallcaps":              "\\textsc",
+    "superscript":            "\\textsuperscript",
+    "subscript":              "\\textsubscript",
+
+    "highlight-yellow":       "\\hl",
+
+    "color-000000":           null,
+    "color-FF0000":           "\\textcolor{red}",
+    "color-800000":           "\\textcolor{red}",
+    "color-0000FF":           "\\textcolor{blue}",
+    "color-0432FF":           "\\textcolor{blue}",
+    "color-auto":             "",
+
+    "FootnoteReference":      "",
+    "FootnoteNumbering":      null,
+    "Floatnumbering":         "",
+    "BibliographicReference": "",
+    "Hyperlink":              "",
+    "":                       "",
+
+    "bidi":                   null
+  }
+}

@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+STDOUT.sync = true
+
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
+
+require 'oslatex'
+
+if ARGV.length == 2 and ARGV.first == '--dump-document'
+  _, docx_filename = ARGV
+
+  reader = OSLaTeX::DocXReader.open(docx_filename)
+  puts reader.document_xml
+elsif ARGV.length == 2 and ARGV.first == '--dump-footnotes'
+  _, docx_filename = ARGV
+
+  reader = OSLaTeX::DocXReader.open(docx_filename)
+  puts reader.footnotes_xml
+elsif ARGV.length == 2
+  docx_filename, tex_filename = ARGV
+  OSLaTeX::convert_docx(docx_filename, tex_filename)
+else
+  STDERR.puts "Usage: oslatex docx-filename tex-filename"
+  exit 1
+end

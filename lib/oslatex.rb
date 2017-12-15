@@ -1,0 +1,13 @@
+require 'zip'
+require 'colorize'
+require 'nokogiri'
+require 'erb'
+require 'json'
+
+require 'oslatex/version'
+require 'oslatex/style_mapping'
+require 'oslatex/docx_reader'
+require 'oslatex/docx_transformer'
+require 'oslatex/docx_walker'
+require 'oslatex/process'
+require 'oslatex/latex_document'

@@ -1,0 +1,34 @@
+PATH
+  remote: .
+  specs:
+    oslatex (0.1.0)
+      colorize (~> 0.7)
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.0)
+    colorize (0.7.7)
+    method_source (0.8.2)
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7)
+      mini_portile2 (~> 2.0.0.rc2)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rubyzip (1.1.7)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.10)
+  oslatex!
+  pry (~> 0.10)
+
+BUNDLED WITH
+   1.11.2
