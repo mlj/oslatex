@@ -103,7 +103,7 @@ Mappings for run styles use a simpler syntax:
 
 ```json
 "run_styles": {
-  "italics": "\\emph"
+  "italics": "\\emph",
   "FootnoteReference": "",
   "FootnoteNumbering": null
 }
