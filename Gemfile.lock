@@ -9,18 +9,16 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    coderay (1.1.0)
-    colorize (0.7.7)
-    method_source (0.8.2)
-    mini_portile2 (2.0.0)
-    nokogiri (1.6.7)
-      mini_portile2 (~> 2.0.0.rc2)
-    pry (0.10.3)
+    coderay (1.1.2)
+    colorize (0.8.1)
+    method_source (0.9.0)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
       coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    rubyzip (1.1.7)
-    slop (3.6.0)
+      method_source (~> 0.9.0)
+    rubyzip (1.2.1)
 
 PLATFORMS
   ruby
@@ -31,4 +29,4 @@ DEPENDENCIES
   pry (~> 0.10)
 
 BUNDLED WITH
-   1.11.2
+   1.16.0
