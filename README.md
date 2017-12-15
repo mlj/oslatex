@@ -16,6 +16,10 @@ _oslatex_ was made to fit the OSLa journal's LaTeX classes and Word templates.
 
 ## Usage
 
+```shell
+oslatex input.docx output.tex
+```
+
 _oslatex_ can only read `.docx` files. It does not support the older, binary
 Word format.
 
