@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'nokogiri', '~> 1.6'
-  spec.add_dependency 'rubyzip', '~> 1.1'
+  spec.add_dependency 'rubyzip', '>= 1.1', '< 3.0'
   spec.add_dependency 'colorize', '~> 0.7'
 
   spec.add_development_dependency 'bundler'
