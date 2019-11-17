@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rubyzip', '~> 1.1'
   spec.add_dependency 'colorize', '~> 0.7'
 
-  spec.add_development_dependency 'bundler', '~> 1.10'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'pry', '~> 0.10'
 end

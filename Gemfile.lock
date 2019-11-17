@@ -24,9 +24,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.10)
+  bundler
   oslatex!
   pry (~> 0.10)
 
 BUNDLED WITH
-   1.16.5
+   2.0.2
